@@ -7,7 +7,7 @@ weatherform.addEventListener('submit',()=>{
     const searchBox = document.querySelector('.search')
    const searchLoc = searchBox.value
    console.log(searchLoc);
-    fetch('/weather?address='+searchLoc).then((response)=>{
+    fetch('/weather?address='+searchLoc+'').then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             masOne.textContent=data.error
